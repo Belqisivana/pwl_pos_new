@@ -11,6 +11,9 @@ class UserSeeder extends Seeder
 {
     public function run(): void
     {
+        // Hapus semua data dulu biar tidak bentrok
+        DB::table('m_user')->truncate();
+        
         $data = [
             [
                 'user_id' => 1,
